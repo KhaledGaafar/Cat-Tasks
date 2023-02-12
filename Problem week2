@@ -1,16 +1,16 @@
-problem1
+#problem1
     SELECT CITY,STATE 
     FROM STATION;
-problem2 
+#problem2 
     SELECT DISTINCT(CITY) FROM STATION 
      WHERE MOD(ID,2)=0;
-problem3
+#problem3
     SELECT SUM(POPULATION)FROM CITY
     WHERE DISTRICT='California';
-problem4
+#problem4
      SELECT COUNT(NAME)FROM CITY
      WHERE POPULATION>100000;
-problem5
+#problem5
       SELECT  CASE
      WHEN A+B <= C OR A+C <= B OR B+C <= A THEN 'Not A Triangle'
      WHEN A=B AND B=C THEN 'Equilateral'
