@@ -1,0 +1,22 @@
+#Problem1
+    SELECT name FROM Employee
+    WHERE salary >2000 AND months <10 
+    ORDER BY employee_id ASC ;
+#Problem2
+     SELECT NAME FROM CITY
+      WHERE COUNTRYCODE IN (SELECT CODE FROM COUNTRY WHERE CONTINENT='Africa');
+#Problem3
+       SELECT SUM(POPULATION) FROM CITY
+       WHERE COUNTRYCODE IN (SELECT CODE FROM COUNTRY WHERE CONTINENT='Asia');
+#Problem4
+       UPDATE Salary 
+       SET sex = CASE 
+          WHEN sex = 'm' THEN 'f'
+          ELSE 'm' END ;
+#Problem5
+       SELECT S.NAME FROM Students AS S
+     JOIN Friends AS F ON S.ID = F.ID
+     JOIN Packages AS K ON S.ID = K.ID
+     JOIN Packages AS K1 ON F.Friend_ID = K1.ID
+     WHERE K1.Salary > K.Salary
+     ORDER BY K1.Salary;
